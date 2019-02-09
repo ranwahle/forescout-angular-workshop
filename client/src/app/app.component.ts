@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Task} from './model/task';
 import {TasksService} from './tasks.service';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import {TasksService} from './tasks.service';
 })
 export class AppComponent {
 
-  tasks: Task[] = [];
+  tasks:  Observable<Task[]>;
   title = 'forescout-angular-workshop';
 
   constructor(private tasksService: TasksService) {

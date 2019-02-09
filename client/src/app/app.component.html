@@ -6,7 +6,7 @@
     <div>Description</div>
     <div>Done?</div>
   </div>
-  <div class="task-row" *ngFor="let task of tasks; let index = index">
+  <div class="task-row" *ngFor="let task of tasks | async; let index = index">
     <div>{{index + 1}}.</div>
     <div>{{task.title}}</div>
     <div>{{task.description}}</div>
