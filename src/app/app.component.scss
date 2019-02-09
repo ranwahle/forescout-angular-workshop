@@ -1,0 +1,19 @@
+@import "../assets/styles/variables";
+.tasks-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-row, .task-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  div {
+    border-style: dotted;
+    border-color: $border-color;
+    border-width: 1px;
+    flex: 1;
+  }
+
+}
