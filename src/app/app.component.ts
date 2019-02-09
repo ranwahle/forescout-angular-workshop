@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {Task} from './model/task';
+import {TasksService} from './tasks.service';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +12,12 @@ export class AppComponent {
   tasks: Task[] = [];
   title = 'forescout-angular-workshop';
 
-  constructor() {
+  constructor(private tasksService: TasksService) {
     this.initTasks();
 
   }
 
   initTasks() {
-    for (let i = 0; i < 10; i++) {
-      this.tasks.push({title: `Task ${i + 1} title`, done: false, description: `Task ${i + 1} Description`});
-    }
+    this.tasks = this.tasksService.getTasks();
   }
 }
