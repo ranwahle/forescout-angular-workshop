@@ -1,16 +1,3 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="tasks-table">
-  <div class="header-row">
-    <div>No.</div>
-    <div>Title</div>
-    <div>Description</div>
-    <div>Done?</div>
-  </div>
-  <div class="task-row" *ngFor="let task of tasks | async; let index = index">
-    <div>{{index + 1}}.</div>
-    <div>{{task.title}}</div>
-    <div>{{task.description}}</div>
-    <div>{{task.done}}</div>
-  </div>
-</div>
-
+<app-header></app-header>
+<router-outlet></router-outlet>
